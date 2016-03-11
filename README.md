@@ -94,7 +94,7 @@ Copyright (C) 2016 Tom Wersinger <homeof@gmail.com>
 
 MIT License
 
-See [LICENSE](https://github.com/hacktuel/slackwall/blob/master/LICENSE.md)
+See [LICENSE](https://github.com/hacktuel/slackwall/blob/master/LICENSE)
 
 
 
