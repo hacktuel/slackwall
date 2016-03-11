@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="slackwall" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <title>slack /io.</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style/style.css">
+
+    <meta name="description" content="slackIO">
+    <script type="text/javascript" src="socket.io/socket.io.js"></script>
+   <!--
+    <script src="lib/jquery.min.js"></script>
+    !-->
+  <script src="lib/underscore.js"></script>
+  <script src="angular/angular/angular.min.js"></script>
+  <script src="angular/angular-resource/angular-resource.min.js"></script>
+  <script src="angular/angular-animate/angular-animate.min.js"></script>
+  <script src="angular/angular-sanitize/angular-sanitize.min.js"></script>
+  <script src="js/app.js"></script>
+  <!-- [¬_¬]~/-) TomW -->
+  </head>
+  <body ng-controller="SlackwallCtrl">
+  <header>
+          <div class="left">
+            <img ng-src="{{team.team_infos.icon.image_44}}" />
+            <h1>{{team.team_infos.domain}}</h1>
+          </div>
+  </header>
+  <div class="channel-box" ng-class="{{channel.class}}" ng-repeat="channel in team.team_channels">
+          <h2>#{{channel.name}}</h2>
+
+         <pre>{{channel.members.length}}</pre>
+          <h4>{{channel.purpose.value}}</h4>
+
+          <div class="channel-messages">
+                <div class="channel-message pin-{{message.pin}}"  ng-repeat="message in channel.messages">
+                 <p ng-bind-html="message.text"></p>
+
+
+                 <p ng-bind-html="message.reaction"></p>
+
+
+                   <div ng-if="message.message" ng-repeat="attachment in message.message.attachments">
+                     <span>{{attachment.title}}</span>
+                        <span>{{attachment.text}}</span>
+                        <span>{{attachment.from_url}}</span>
+                        <span>{{attachment.service_name}}</span>
+                        <span>{{attachment.title_link}}</span>
+
+                     
+                        <img ng-if="attachment.image_url" class="thumb" ng-src="{{attachment.image_url}}" />
+                        <img ng-if="attachment.thumb_url" class="thumb" ng-src="{{attachment.thumb_url}}" />
+                   </div>
+                </div>
+          </div>
+  </div>
+
+
+
+
+
+    <!--
+      <div id="team"></div>
+      <div id="channels"></div>
+    !-->
+  </body>
+</html> 

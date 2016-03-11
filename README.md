@@ -1,5 +1,4 @@
-# Slack APIs+socketIO
-
+# Slack API + websockets + webserver
 
 
 ## WHAT
@@ -8,27 +7,54 @@ a web-interface for slack team (messages, links, channel)
 
 ## LOGIC
 
+
 BOT (slack)  <---> RTM API (node module)
+									
+
 									<----> nodeJS server (express)
+									
+
 													|
+									
+
 													|
+									
+
 											    memory storage (No database storage) 
+									
+
 														|
+									
+
 														|
+									
+
 													socket.io 	-----> express+angular page 
+									
+
 																				|
+									
+
 																   socket <-----|
-												 
+									
+
+
 ## INSTALL
 
-git clone https://github.com/hacktuel/slackwall.git
+`git clone https://github.com/hacktuel/slackwall.git`
 
-cp config_sample.json config.json 
-nano config.json (edit your token value)
 
-npm install
+`cp config_sample.json config.json`
 
-node index.js
+
+`nano config.json` (edit your token value)
+
+
+`npm install`
+
+
+`node index.js`
+
 
 open http://localhost:7143 || config.PORT
 
@@ -48,9 +74,6 @@ socket stream
 
 Add event type
 add display
-
-
-Using (https://github.com/tomplays/MusicBox/issues?state=open) open issues
 
 ## Versions
   
@@ -73,6 +96,5 @@ MIT License
 
 See [LICENSE](https://github.com/hacktuel/slackwall/blob/master/LICENSE.md)
 
-#### DISCLAIMER
 
 

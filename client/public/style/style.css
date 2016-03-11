@@ -1,0 +1,82 @@
+/* ############################################ */
+/* Base                                         */
+
+html {
+	 box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    width:100%;
+}
+
+*, *:before, *:after {
+	margin:0;
+	padding:0;
+	box-sizing: inherit;
+}
+
+a{outline: none; cursor:pointer; color:rgb(82, 179, 217); text-decoration:none;}
+h6{font-weight:normal;  float:left ; width:100%;}
+
+.gamefont, h1{ font-family: 'VT323', sans-serif; }
+h1{
+  font-size:2.0em;
+}
+
+
+
+
+
+body {
+    
+    max-width: 90%;
+    margin:0 auto;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    padding:0 1%;
+    outline: 0 none;
+    vertical-align: baseline;
+    font-family: "Open Sans", Arial,Helvetica,sans-serif;
+    margin-top:2%;
+}
+header{
+  width:100%;
+  margin-bottom:1%;
+   display: block;
+    float: left;
+}
+header .left img{float:left; margin-right:1%;}
+      .channel-box{padding:1%; border:1px solid #cecece; margin-top:1%; width:90%; margin-right:1%; float:left;}  
+
+      .channel-box .thumb{padding:1%; border:1px solid #cecece; margin-top:1%; max-width:100%; height:auto; width:100%; margin-right:1%; float:left;}  
+
+
+.pin-true {
+    background: rgba(162, 222, 208, 0.3) none repeat scroll 0 0;
+    font-size: 1.1em;
+    margin: 1% 0;
+    padding: 1%;
+}
+
+@media (min-width: 600px) and (max-width: 980px) {
+    body{
+       
+        margin-top:10px; 
+        font-size: 90%;  
+    }
+  
+}
+
+@media (min-width: 10px) and (max-width: 599px) {
+    body{
+        margin-top:10px; 
+         font-size: 90%;
+
+    }
+  
+}
+
+
+@media (min-width: 940px) and (max-width: 970px) {
+    body{ }
+}
+    
